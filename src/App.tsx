@@ -1,6 +1,8 @@
+import './styles/index.scss';
+
 const App = () => {
   return (
-    <div>
+    <div className="app">
       <h1>Nerz</h1>
     </div>
   )
