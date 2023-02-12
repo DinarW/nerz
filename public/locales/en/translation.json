@@ -2,5 +2,7 @@
   "test": "Test",
   "translate": "Translate",
   "Language": "English",
-  "Page_Not_Found": "Page not found"
+  "Page_Not_Found": "Page not found",
+  "Something_Went_Wrong": "Something went wrong",
+  "Reload_Page": "Reload page"
 }

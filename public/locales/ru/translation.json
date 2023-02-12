@@ -2,5 +2,7 @@
   "test": "Тест",
   "translate": "Перевод",
   "Language": "Русский",
-  "Page_Not_Found": "Страница не найдена"
+  "Page_Not_Found": "Страница не найдена",
+  "Something_Went_Wrong": "Произошла непредвиденная ошибка",
+  "Reload_Page": "Перезагрузить ошибку"
 }
