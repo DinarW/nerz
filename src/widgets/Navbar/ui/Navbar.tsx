@@ -21,7 +21,6 @@ export const Navbar = ({ className }: NavbarProps) => {
                 >
                     {t('Main_Page')}
                 </AppLink>
-                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <AppLink to="/about">{t('About_Page')}</AppLink>
             </div>
         </div>
