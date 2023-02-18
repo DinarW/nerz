@@ -1,3 +1,4 @@
+import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
@@ -23,7 +24,7 @@ Primary.args = {
 };
 
 export const PrimaryDark = Template.bind({});
-Primary.args = {
+PrimaryDark.args = {
     theme: AppLinkTheme.PRIMARY,
 };
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
@@ -34,7 +35,7 @@ Secondary.args = {
 };
 
 export const SecondaryDark = Template.bind({});
-Secondary.args = {
+SecondaryDark.args = {
     theme: AppLinkTheme.SECONDARY,
 };
 SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)];
