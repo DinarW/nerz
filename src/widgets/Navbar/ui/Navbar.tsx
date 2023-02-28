@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Modal } from 'shared/ui/Modal/Modal';
+import { LoginModal } from 'features/AuthByUsername';
 import React, { useCallback, useState } from 'react';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './Navbar.module.scss';
@@ -13,8 +13,12 @@ export const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
 
-    const onToggleModal = useCallback(() => {
+    const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
+    }, [setIsAuthModal]);
+
+    const onShowModal = useCallback(() => {
+        setIsAuthModal(true);
     }, [setIsAuthModal]);
 
     return (
@@ -22,15 +26,11 @@ export const Navbar = ({ className }: NavbarProps) => {
             <Button
                 theme={ButtonTheme.CLEAR_INVERTED}
                 className={cls.links}
-                onClick={() => setIsAuthModal(true)}
+                onClick={onShowModal}
             >
                 {t('Войти')}
             </Button>
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                {/* eslint-disable-next-line i18next/no-literal-string */}
-                {/* eslint-disable-next-line */}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem deleniti deserunt dolores eaque est et, eum exercitationem impedit ipsam molestias mollitia natus neque optio quo quod repellendus repudiandae, sunt?
-            </Modal>
+            <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
         </div>
     );
 };
